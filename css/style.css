@@ -1,3 +1,7 @@
+*{box-sizing: border-box;}
+
+
+
 .img_tarjeta{
     width: 150px;
     height: 250px;
@@ -10,11 +14,26 @@
     
     .header_home{
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        background-color: rgba(0, 0, 255, 0.541);
+        width: 100%;
     }
     
     .logo{
-        height: 500px;
-        width: 400px;
+        height: 160px;
+        width: 120px;
+        order: -1;
+    }
+
+    .nav{
+        order: 0;
+        background-color: rgba(17, 194, 185, 0.575);
+    }
+
+    .formulario{
+        order: 1;
     }
 
