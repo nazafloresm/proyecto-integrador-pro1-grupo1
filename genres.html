@@ -4,67 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/genres.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>GENRES</title>
 </head>
 
-<body>
-    <header>        
-        <nav>
-            <p> 
+<body class="body">
+    <header class="header_home">   
+
+        <nav class="nav">
+            <p class="barra"> 
                 <a class="barra" href="./home.html">HOME |</a>
                 <a class="barra" href="detail-movie.html">PELÍCULAS |</a>
                 <a class="barra" href="detail-serie.html">SERIES |</a>
                 <a class="barra" href="genres.html"> GÉNEROS |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
+                <a class="barra" href="favorites.html"> FAVORITOS </a>
             </p>
         </nav>
-        <img class="logo" src="../img/logo.png" alt="Logo">
-        <form action="./search-results.html">
-            <input placeholder="Resultados de búsqueda" type="text">
+
+        <img class="logo" src="./img/logo.png" alt="Logo">
+
+        <form class="formulario" action="./search-results.html">
+            <input class="busqueda" placeholder="Búsqueda" type="text">
         </form>
-    </header>    
+
+    </header>         
 
     <main>
-        <h1 class="titulogenero">GÉNEROS</h1>  
+        <h1 class="titulos">GÉNEROS</h1>  
         
-        <section class="contenedorpadregeneros">
-            <h3>GÉNEROS DE PELÍCULAS</h3>
+        <section class="genero">
+            <h3 class="titulos">GÉNEROS DE PELÍCULAS</h3>
             <article>
-                <ul>
-                <li><button class="buttongenero"><a href="./detail-genres.html #acción">ACCIÓN</a></button></li>
-                <li><button class="buttongenero" ><a href="./detail-genres.html #comedia">COMEDIA</a></button></li>
-                <li><button class="buttongenero"><a href="./detail-genres.html #terror">TERROR</a></button></li>
+                <ul class="listas_generos">
+                <li class="hijas_listas_generos"><a class="links" href="./detail-genres.html">ACCIÓN</a></li>
+                <li class="hijas_listas_generos"><a class="links" href="./detail-genres.html">COMEDIA</a></li>
+                <li class="hijas_listas_generos"><a class="links" href="./detail-genres.html">TERROR</a></li>
                 </ul>
             </article>
         </section>
 
-        <section class="contenedorgenerosseries">
-            <h3>GÉNEROS DE SERIES</h3>
+        <section class="genero">
+            <h3 class="titulos">GÉNEROS DE SERIES</h3>
             <article>
-            <ul>
-                <li><button class="buttongenero"><a href="./detail-genres.html #acción">ACCIÓN</a></button></li>
-                <li><button class="buttongenero" ><a href="./detail-genres.html #comedia">COMEDIA</a></button></li>
-                <li><button class="buttongenero"><a href="./detail-genres.html #terror">TERROR</a></button></li>
+            <ul class="listas_generos">
+                <li class="hijas_listas_generos"><a class="links" href="./detail-genres.html">ACCIÓN</a></li>
+                <li class="hijas_listas_generos"><a class="links" href="./detail-genres.html">COMEDIA</a></li>
+                <li class="hijas_listas_generos"><a class="links" href="./detail-genres.html">TERROR</a></li>
             </ul>
             </article>
         </section>
     </main>
     
-    <br>
-    <br>
 
     <footer>
-        <nav>
-            <p> 
-                <a class="barra" href="./home.html">HOME |</a>
-                <a class="barra" href="detail-movie.html">PELÍCULAS |</a>
-                <a class="barra" href="detail-serie.html">SERIES |</a>
-                <a class="barra" href="genres.html"> GÉNEROS |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
-            </p>    
-        </nav>
-     <img class="logo" src="../img/logo.png" alt="Logo">
+        <section class="footer">
+            <article class="nombres">Nazareno Flores Muñoz</article>
+            <article class="nombres">Luciano Setton</article>
+            <article class="nombres">Santiago Junco</article>
+        </section>
     </footer>
     
 </body>

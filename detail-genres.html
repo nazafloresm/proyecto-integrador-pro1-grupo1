@@ -4,222 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/detail-genres.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title> DETAIL GENRES</title>
 </head>
 
-<body>
-    <header>        
-        <nav>
-            <p> 
-                <a class="barra" href="home.html">HOME |</a>
+<body class="body">
+    <header class="header_home">   
+
+        <nav class="nav">
+            <p class="barra"> 
+                <a class="barra" href="./home.html">HOME |</a>
                 <a class="barra" href="detail-movie.html">PELÍCULAS |</a>
                 <a class="barra" href="detail-serie.html">SERIES |</a>
-                <a class="barra" href="genres.html"> GENEROS |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
+                <a class="barra" href="genres.html"> GÉNEROS |</a>
+                <a class="barra" href="favorites.html"> FAVORITOS </a>
             </p>
         </nav>
+
         <img class="logo" src="./img/logo.png" alt="Logo">
-        <form action="search-results.html">
-            <input placeholder="Resultados de búsqueda" type="text">
+
+        <form class="formulario" action="./search-results.html">
+            <input class="busqueda" placeholder="Búsqueda" type="text">
         </form>
-    </header>
+
+    </header>      
     
     
-<main>
+    <main>
 
-        <h1>DETALLE DE GÉNEROS</h1>
+        <h2 class="titulos">PELÍCULAS DE ACCIÓN</h2>  
 
-        <h2 id="acción">ACCIÓN</h2>
-        
-    <section>
+            <section class="listadohome_detalle_generos"> 
 
-        <h3>PELÍCULAS</h3>
+                    <article class="fotos">
+                        <img class="img_tarjeta" src="./img/accion/james bond.jpeg" alt="Skyfall">
+                        <p class="descripcion"><a class="links" href="./detail-movie.html">Skyfall</a></p>
+                        <p class="descripcion">Fecha: 01/11/2012</p>       
+                    </article>
+                    
 
-            <article>
-                <img id="Skyfall" src="./img/accion/james bond.jpeg" alt="Skyfall">
-                <h3><a href="detail-movie.html #Skyfall">James Bond: Skyfall</a></h3>
-                <p>Fecha: 01/11/2012</p>
-            </article>
-        
-            <article>
-                <img id="RapFur" src="./img/accion/rapidos y furiosos.webp" alt="Rap y Fur">
-                <h3><a href="detail-movie.html #RapFur">Rápidos y Furiosos 6</a></h3>
-                <p>Fecha: 23/05/2013</p>
-            </article>    
-            
-            <article>
-                <img id="Intocables" src="./img/accion/los intocables.jpeg" alt="Intocables">
-                <h3><a href="detail-movie.html #Intocables">Los Intocables</a></h3>
-                <p>Fecha: 27/08/1987</p>
-            </article>
-            
-            <article>
-                <img id="TG" src="./img/accion/top gun.jpeg" alt="Top Gun">
-                <h3><a href="detail-movie.html #TG">Top Gun</a></h3>
-                <p>Fecha: 16/05/1986</p> 
-            </article>
-        
-            <article>
-                <img src="./img/accion/Durodematar.webp" alt="Duro de Matar">
-                <h3><a href="detail-movie.html #duro">Duro de Matar</a></h3>
-                <p>Fecha: 15/12/1988</p>
-            </article>
+                    <article class="fotos">
+                        <img class="img_tarjeta" src="./img/accion/rapidos y furiosos.webp" alt="Rap y Fur">
+                        <p class="descripcion"><a class="links" href="detail-movie.html">Rápidos y Furiosos 6</a></p>
+                        <p class="descripcion">Fecha: 23/05/2013</p>     
+                    </article>
 
-        <h3>SERIES</h3>
+                    <article class="fotos">
+                        <img class="img_tarjeta" src="./img/accion/top gun.jpeg" alt="TG">
+                        <p class="descripcion"><a class="links" href="detail-movie.html">Top Gun</a></p>
+                        <p class="descripcion">Fecha: 16/05/1986</p>      
+                    </article>
 
-            <article>
-                <img id="Break" src="./img/series/accion/prision break.jpeg" alt="PB">
-                <h3><a href="detail-serie.html #Break">Prison Break</a></h3>
-                <p>Fecha: 29/08/2005</p>
-            </article>
+                    <article class="fotos">
+                        <img class="img_tarjeta" src="./img/accion/los intocables.jpeg" alt="Intocables">
+                        <p class="descripcion"><a class="links" href="detail-movie.html">Los Intocables</a></p>
+                        <p class="descripcion">Fecha: 27/08/1987</p>      
+                    </article>
 
-            <article>
-                <img id="PB" src="./img/series/accion/peaky blinders.jpeg" alt="Peaky B">
-                <h3><a href="detail-serie.html #PB">Peaky Blinders</a></h3>
-                <p>Fecha: 12/09/2013</p>
-            </article>
-
-            <article>
-                <img src="./img/series/accion/swat.webp" alt="SWAT">
-                <h3><a href="detail-serie.html #Swat">SWAT</a></h3>
-                <p>Fecha: 02/11/2017</p>
-            </article>
-
-            <article>
-                <img id="Breaking" src="./img/series/accion/breaking bad.jpeg" alt="BB">
-                <h3><a href="detail-serie.html #Breaking">Breaking Bad</a></h3>
-                <p>Fecha: 20/01/2008</p>
-            </article>
-
-            <article>
-                <img id="BL" src="./img/series/accion/blacklist.jpeg" alt="Blacklist">
-                <h3><a href="detail-serie.html #BL">Blacklist</a></h3>
-                <p>Fecha: 23/09/2013</p>
-            </article>
-
-    </section>
-
-    <h2 id="comedia">COMEDIA</h2>
-
-    <section>
-        
-        <h3>PELÍCULAS</h3>
-
-            <article>
-                <img id="Rubias" src="./img/comedia/donde estan las rubias.jpeg" alt="Rubias">
-                <h3><a href="detail-movie.html #Rubias">¿Y dónde están las rubias?</a></h3>
-                <p>Fecha: 23/06/2004</p>
-            </article>   
-
-            <article>
-                <img id="Zohan" src="./img/comedia/no te metas con zohan.webp" alt="Zohan">
-                <h3><a href="detail-movie.html #Zohan">No te metas con Zohan</a></h3>
-                <p>Fecha: 18/09/2008</p>
-            </article>
-
-            <article>
-                <img src="./img/comedia/chiquito pero peligroso.webp" alt="Peligroso">
-                <h3><a href="detail-movie.html #Chiq">Chiquito pero peligroso</a></h3>
-                <p>Fecha: 14/07/2006</p>
-            </article>
-
-            <article>
-                <img src="./img/comedia/jack y jill.jpeg" alt="J&J">
-                <h3><a href="detail-movie.html #Jill">Jack y Jill</a></h3>
-                <p>Fecha: 16/02/2012</p>
-            </article>
-
-            <article>
-                <img id="Soncomo" src="./img/comedia/son como niños.jpeg" alt="Como niños">
-                <h3><a href="detail-movie.html #Soncomo">Son como niños</a></h3>
-                <p>Fecha: 22/07/2010</p>
-            </article>
-
-        <h3>SERIES</h3>
-
-            <article>
-                <img id="HIMYM" src="../img/series/comedia/how i met your mother.jpeg" alt="HIMYM">
-                <h3><a href="detail-serie.html #HIMYM">How I met your mother</a></h3>
-                <p>Fecha: 19/09/2005</p>
-            </article>
-
-            <article>
-                <img id="MF" src="../img/series/comedia/modern family.jpeg" alt="Modern F">
-                <h3><a href="detail-serie.html #MF">Modern Family</a></h3>
-                <p>Fecha: 23/09/2009</p>
-            </article>
-
-            <article>
-               <img id="Brooklyn" src="../img/series/comedia/brrokly99.jpeg" alt="B99">
-                <h3><a href="detail-serie.html #Brooklyn">Brooklyn 99</a></h3>
-                <p>Fecha: 17/09/2013</p>
-            </article>    
-
-            <article>
-                <img src="../img/series/comedia/big bang toery.jpeg" alt="TBBT">
-                <h3><a href="detail-serie.html #TBBT">The Big Bang theory</a></h3>
-                <p>Fecha: 24/09/2007</p>
-           </article>
-
-            <article>
-                <img id="Friends" src="../img/series/comedia/friends.jpeg" alt="Friends">
-                <h3><a href="detail-serie.html #Friends">FRIENDS</a></h3>
-                <p>Fecha: 22/09/1994</p>
-            </article>
-    </section>     
-    
-    <h2 id="terror">TERROR</h2>
-
-    <section>
-
-        <h3>PELÍCULAS</h3>
-
-            <article>
-                <img id="Scream" src="../img/terror/scream.png" alt="Scream">
-                <h3><a href="detail-movie.html #Scream">Scream</a></h3>
-                <p>Fecha: 11/09/1997</p>
-            </article>
-    
-            <article>
-                <img id="It" src="../img/terror/it.jpeg" alt="IT">
-                <h3><a href="detail-movie.html #It">IT</a></h3>
-                <p>Fecha: 21/09/2017</p>
-            </article>
-    
-            <article>
-                <img id="Conjuro" src="../img/terror/el conjuro.jpeg" alt="Conjuro">
-                <h3><a href="detail-movie.html #Conjuro">El Conjuro</a></h3>
-                <p>Fecha: 08/08/2013</p>
-            </article>
-
-            <article>
-                <img src="../img/terror/terror en la calle elm.jpeg" alt="Elm">
-                <h3><a href="detail-movie.html #ELM">Pesadilla en la calle Elm</a></h3>
-                <p>Fecha: 30/04/2010</p>
-            </article>
-
-            <article>
-                <img src="../img/terror/el exorcista.jpeg" alt="Exorcista">
-                <h3><a href="detail-movie.html #Exor">El Exorcista</a></h3>
-                <p>Fecha: 15/08/1974</p>
-            </article>
-
-        <h3>SERIES</h3>
-        
+                    <article class="fotos">
+                        <img class="img_tarjeta" src="./img/accion/Durodematar.webp" alt="Duro de Matar">
+                        <p class="descripcion"><a class="links" href="detail-movie.html">Duro de Matar</a></p>
+                        <p class="descripcion">Fecha: 15/12/1988</p>    
+                    </article>   
+            </section>
+        </main>
 
 
-    </main>
-
-    <footer>
-        <nav>
-            <p> <a class="barra" href="home.html">HOME |</a>
-                <a class="barra" href="genres.html"> GENEROS  |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
-            </p>    
-        </nav>
-     <img class="logo" src="../img/logo.png" alt="Logo">
-    </footer>
+        <footer>
+            <section class="footer">
+                <article class="nombres">Nazareno Flores Muñoz</article>
+                <article class="nombres">Luciano Setton</article>
+                <article class="nombres">Santiago Junco</article>
+            </section>
+        </footer>
     
 </body>
 </html>

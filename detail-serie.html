@@ -4,301 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/detail-serie.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>DETAIL SERIE</title>
 </head>
 
-<body>
+<body class="body">
 
-    <header>        
-        <nav>
-            <p> 
+    <header class="header_home">   
+
+        <nav class="nav">
+            <p class="barra"> 
                 <a class="barra" href="./home.html">HOME |</a>
                 <a class="barra" href="detail-movie.html">PELÍCULAS |</a>
                 <a class="barra" href="detail-serie.html">SERIES |</a>
-                <a class="barra" href="genres.html"> GENEROS |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
+                <a class="barra" href="genres.html"> GÉNEROS |</a>
+                <a class="barra" href="favorites.html"> FAVORITOS </a>
             </p>
         </nav>
-        <img class="logo" src="../img/logo.png" alt="Logo">
-        <form action="./search-results.html">
-            <input placeholder="Resultados de búsqueda" type="text">
+
+        <img class="logo" src="./img/logo.png" alt="Logo">
+
+        <form class="formulario" action="./search-results.html">
+            <input class="busqueda" placeholder="Búsqueda" type="text">
         </form>
-    </header>       
+
+    </header>      
     
     <main>
-        <h1 class="título">DETALLES DE SERIES</h1>
+        <h1 class="titulos">DETALLES DE SERIES</h1>
     
-        <h2>Lista de series</h2>
-    
-        <article>
-            <img id="HIMYM" src="../img/series/comedia/how i met your mother.jpeg" alt="HIMYM">
-            <h3>How I met your mother</h3>
-            <p>Rating: 8.5/10</p>
-            <p>Fecha: 19/09/2005</p>
-            <p>
+        <article class="detalles">
+            <img class="img_detalle" src="./img/series/comedia/how i met your mother.jpeg" alt="HIMYM">
+            <h3 class="descripcion_detalle">How I met your mother</h3>
+            <p class="descripcion_detalle">Rating: 8.5/10</p>
+            <p class="descripcion_detalle">Fecha: 19/09/2005</p>
+            <p class="descripcion_detalle">
                 Sinopsis: En el año 2030, el arquitecto Ted Mosby (Josh Radnor) decide contarles a sus dos hijos la historia de cómo conoció a su madre. Por lo tanto, inicia una narración de recuerdos recopilados desde el 2005, año en el que dos de sus mejores amigos, Marshall Eriksen (Jason Segel) y Lily Aldrin (Alyson Hannigan), deciden casarse tras nueve años de noviazgo. Esa decisión hace que Ted, soltero empedernido, al igual que su otro mejor amigo Barney Stinson (Neil Patrick Harris), decida encontrar al amor de su vida desesperadamente. De una manera curiosa, aparece en ese instante la reportera canadiense Robin Scherbatsky (Cobie Smulders), que se convertirá en una nueva amiga del grupo y parte importante en la vida de Ted. A partir de este hecho, inicia la búsqueda implacable de una esposa que se convierta en madre de sus hijos.
             </p>
-            <p>Género: Comedia</p>
+            <p class="descripcion_detalle">Género: Comedia</p>
         </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
+        
 
-        <br>
-        <br>
-
-        <article>
-            <img id="MF" src="../img/series/comedia/modern family.jpeg" alt="Modern F">
-            <h3>Modern Family</h3>
-            <p>rating: 9.5/10</p>
-            <p>Fecha: 23/09/2009</p>
-            <p>
-                Sinopsis: Modern Family es una serie de televisión estadounidense en formato falso documental que se estrenó en ABC el 23 de septiembre de 2009 y finalizó el 8 de abril de 2020. La serie sigue la vida de Jay Pritchett y su familia, todos los cuales viven en Los Ángeles. La familia de Jay Pritchett incluye a su segunda esposa y su hijastro, así como a sus dos hijos adultos; sus esposos e hijos y nietos. 
-            </p>
-            <p>Género: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="Brooklyn" src="../img/series/comedia/brrokly99.jpeg" alt="B99">
-            <h3>Brooklyn 99</h3>
-            <p>Rating: 9/10</p>
-            <p>Fecha: 17/09/2013</p>
-            <p>
-                Sinopsis: La serie gira en torno a Jake Peralta (Andy Samberg), un talentoso pero inmaduro detective del DPNY en la ficticia comisaría 99 de Brooklyn, que a menudo entra en conflicto con su oficial al mando, el serio y severo capitán Raymond Holt (Andre Braugher).
-            </p>
-            <p>Género: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="TBBT" src="../img/series/comedia/big bang toery.jpeg" alt="TBBT">
-            <h3>The Big Bang theory</h3>
-            <p>Rating: 7/10</p>
-            <p>Fecha: 24/09/2007</p>
-            <p>
-                Sinopsis: La serie comienza con la llegada de Penny, aspirante a actriz, al apartamento vecino del que comparten Sheldon y Leonard, dos físicos que trabajan en el Instituto Tecnológico de California (Caltech). Leonard se enamora desde el primer momento de Penny.
-                Leonard y Sheldon son científicos destacados en Caltech, amigos a su vez de Howard y Raj, que son presentados como unos completos geeks, alejados de las inquietudes y problemas de la gente común. En el curso de la serie se muestra la dificultad de los protagonistas masculinos para relacionarse con personas de fuera de su entorno, principalmente de sexo femenino, dando lugar a situaciones cómicas.
-            </p>
-            <p>Género: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="Friends" src="../img/series/comedia/friends.jpeg" alt="Friends">
-            <h3>FRIENDS</h3>
-            <p>Rating: 9/10</p>
-            <p>Fecha: 22/09/1994</p>
-            <p>
-                Sinopsis: La historia da inicio en un café de Nueva York, Central Perk, en el cual se encuentran los personajes: Monica Geller, Chandler Bing, Phoebe Buffay y Joey Tribbiani; donde también se incorporan con el paso de los minutos Ross Geller y por último Rachel Green. Este encuentro da comienzo a una etapa donde seis amigos viven en la ciudad de Nueva York. Es una comedia basada en la amistad, los buenos y malos momentos como: los triunfos, el amor, el pasado y el futuro.
-            </p>
-            <p>Género: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="Break" src="../img/series/accion/prision break.jpeg" alt="PB">
-            <h3>Prison Break</h3>
-            <p>Rating: 8.5/10</p>
-            <p>Fecha: 29/08/2005</p>
-            <p>
-                Sinopsis: La trama de la serie gira en torno a Michael Scofield, que en un elaborado plan para rescatar a su hermanastro Lincoln Burrows, entra a "Fox River" una cárcel de máxima seguridad cerca de Chicago, para sacar a su hermano acusado por un falso asesinato del hermano de la vicepresidenta.
-            </p>
-            <p>Género: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="PB" src="../img/series/accion/peaky blinders.jpeg" alt="Peaky B">
-            <h3>Peaky Blinders</h3>
-            <p>Rating: 10/10</p>
-            <p>Fecha: 12/09/2013</p>
-            <p>
-                Sinopsis: Una familia de gánsters asentada en Birmingham tras la Primera Guerra Mundial (1914-1918), dirige un local de apuestas hípicas. Las actividades del ambicioso jefe de la banda llaman la atención del Inspector jefe Chester Campbell, un detective de la Real Policía Irlandesa que es enviado desde Belfast para limpiar la ciudad y acabar con la banda.
-            </p>
-            <p>Género: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="Swat" src="../img/series/accion/swat.webp" alt="SWAT">
-            <h3>SWAT</h3>
-            <p>Rating: 6/10</p>
-            <p>Fecha: 02/11/2017</p>
-            <p>
-                Sinopsis: Un agente de policía de Los Ángeles busca una oportunidad meterse en el cuerpo de élite S.W.A.T. La ocasión llega cuando el jefe del comando, recibe la orden de reclutar a cinco policías. Tras entrenamientos, el nuevo equipo entra en acción.
-            </p>
-            <p>Género: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="Breaking" src="../img/series/accion/breaking bad.jpeg" alt="BB">
-            <h3>Breaking Bad</h3>
-            <p>Rating: 10/10</p>
-            <p>Fecha: 20/01/2008</p>
-            <p>
-                Sinopsis: Walter White (Bryan Cranston) es un frustrado profesor de química en un instituto, padre de un joven discapacitado y con una mujer (Anna Gunn) embarazada. Además, trabaja en un lavadero de vehículos por las tardes. Cuando le diagnostican un cáncer pulmonar terminal se plantea qué pasará con su familia cuando él muera.
-            </p>
-            <p>Género: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img id="BL" src="../img/series/accion/blacklist.jpeg" alt="Blacklist">
-            <h3>Blacklist</h3>
-            <p>Rating: 8/10</p>
-            <p>Fecha: 23/09/2013</p>
-            <p>
-                Sinopsis: Raymond Reddington es un escurridizo ex criminal que, a cambio de inmunidad, acabó entregándose al FBI y les ofreció una lista de los delincuentes más peligrosos del mundo. Ahora, colabora con la agente novata Elizabeth Keen para capturarlos uno a uno
-            </p>
-            <p>Género: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    
-        <br>
-        <br>
-
-        <article>
-            <img id="AHS" src="../img/series/terror/ahs.png" alt="AHS">
-            <h3>American Horror Story</h3>
-            <p>Rating: 9/10</p>
-            <p>Fecha: 05/10/2011</p>
-            <p>
-                Sinopsis: American Horror Story (a veces abreviada como AHS) es una serie de televisión estadounidense de antología y horror creada por Ryan Murphy y Brad Falchuk para la cadena de cable FX. Cada temporada se concibe como una miniserie autónoma, siguiendo un conjunto diferente de personajes y escenarios, y un argumento con su propio «principio, medio y fin». Algunos elementos de la trama de cada temporada están vagamente inspirados en hechos reales.
-            </p>
-            <p>Género: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    
-        <br>
-        <br>
-
-        <article>
-            <img id="Walking" src="../img/series/terror/walking dead.jpg" alt="TWD">
-            <h3>The Walking Dead</h3>
-            <p>Rating: 7.5/10</p>
-            <p>Fecha: 31/10/2010</p>
-            <p>
-                Sinopsis: La serie presenta un gran elenco como sobrevivientes de un apocalipsis zombi, tratando de mantenerse con vida bajo la amenaza casi constante de ataques de los zombis sin conciencia, coloquialmente conocidos como "caminantes".
-            </p>
-            <p>Género: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    
-        <br>
-        <br>
-
-        <article>
-            <img src="../img/series/terror/resident evil.jpeg" alt="Resident">
-            <h3>Resident Evil</h3>
-            <p>Rating: 6/10</p>
-            <p>Fecha: 14/07/2022</p>
-            <p>
-                Sinopsis: Basada en la conocida saga de videojuegos Resident Evil, esta serie sigue a un grupo de policías que investigan misteriosos sucesos en la montaña y descubren que una compañía farmacéutica ha creado un virus que convierte a las personas en zombis. Los únicos cuatro supervivientes vuelven a la ciudad e informan de lo sucedido, pero nadie les cree.
-                Poco después, el virus se propaga por la ciudad y el gobierno americano decide bombardearla para mantener oculto cualquier síntoma del virus. Sin embargo, los policías que sobrevivieron al virus hacen todo lo posible para evitar la desaparición de su ciudad.
-            </p>
-            <p>Género: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img src="../img/series/terror/vapire diaries.jpeg" alt="Vampire">
-            <h3>The Vampire Diaries</h3>
-            <p>Rating: 6.5/10</p>
-            <p>Fecha de estreno: 10/09/2009</p>
-            <p>
-                Sinopsis: Esta es la historia de dos hermanos vampiros obsesionados por la misma hermosa joven en un pequeño pueblo donde los seres sobrenaturales conviven en secreto con los lugareños.
-            </p>
-            <p>Género: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <br>
-        <br>
-
-        <article>
-            <img src="../img/series/terror/marianne.jpeg" alt="Marianne">
-            <h3>Marianne</h3>
-            <p>Rating: 7/10</p>
-            <p>Fecha: 13/09/2019</p>
-            <p>
-                Sinopsis: Marianne sigue a una autora con una exitosa novela de terror. Un día, se da cuenta de que las historias de terror que escribió se hacen realidad, por lo que tendrá que volver a su pueblo natal para enfrentarse a los demonios de su pasado.
-                Durante su regreso, descubre que el espíritu maligno que la acecha en sus sueños haciendo su vida imposible, también está sembrando el caos en el mundo real. El espíritu que le ha acechado desde la infancia es Marianne, una bruja que se incorpora en las almas de sus presas. 
-            </p>
-            <p>Género: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-    </main>
-    
-    <br>
-    <br>
 
     <footer>
-        <nav>
-            <p> <a class="barra" href="home.html">HOME |</a>
-                <a class="barra" href="genres.html"> GENEROS  |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
-            </p>    
-        </nav>
-     <img class="logo" src="../img/logo.png" alt="Logo">
+        <section class="footer">
+            <article class="nombres">Nazareno Flores Muñoz</article>
+            <article class="nombres">Luciano Setton</article>
+            <article class="nombres">Santiago Junco</article>
+        </section>
     </footer>
     
 </body>

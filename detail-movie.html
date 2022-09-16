@@ -4,270 +4,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/detail-movie.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>DETAIL MOVIE</title>
 </head>
 
-<body>
+<body class="body">
 
-    <header>        
-        <nav>
-            <p> 
+    <header class="header_home">   
+
+        <nav class="nav">
+            <p class="barra"> 
                 <a class="barra" href="./home.html">HOME |</a>
                 <a class="barra" href="detail-movie.html">PELÍCULAS |</a>
                 <a class="barra" href="detail-serie.html">SERIES |</a>
-                <a class="barra" href="genres.html"> GENEROS |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
+                <a class="barra" href="genres.html"> GÉNEROS |</a>
+                <a class="barra" href="favorites.html"> FAVORITOS </a>
             </p>
         </nav>
-        <img class="logo" src="../img/logo.png" alt="Logo">
-        <form action="./search-results.html">
-            <input placeholder="Resultados de búsqueda" type="text">
+
+        <img class="logo" src="./img/logo.png" alt="Logo">
+
+        <form class="formulario" action="./search-results.html">
+            <input class="busqueda" placeholder="Búsqueda" type="text">
         </form>
-    </header>    
+
+    </header>      
     
     <main>
-        <h1 class="título">DETALLES DE PELÍCULAS</h1>
+        <h1 class="titulos">DETALLES DE PELÍCULAS</h1>
     
-        <h2>Lista de películas</h2>
-    
-        <article>
-            <img id="Skyfall" src="../img/accion/james bond.jpeg" alt="Skyfall">
-            <h3>James Bond: Skyfall</h3>
-            <p>Rating: 8/10</p>
-            <p>Fecha: 01/11/2012</p>
-            <p>Duración: 2h 23m</p>
-            <p>
+        <article class="detalles">
+            <img class="img_detalle" src="./img/accion/james bond.jpeg" alt="Skyfall">
+            <h3 class="descripcion_detalle">James Bond: Skyfall</h3>
+            <p class="descripcion_detalle">Rating: 8/10</p>
+            <p class="descripcion_detalle">Fecha: 01/11/2012</p>
+            <p class="descripcion_detalle">Duración: 2h 23m</p>
+            <p class="descripcion_detalle">
                 Sinopsis: La cuando el pasado de ella vuelve para atormentarla. El agentea lealtad de James Bond, el mejor agente de los servicios británicos, hacia su superiora M se verá puesta a prueb 007 deberá localizar y eliminar la amenaza que representa el villano Silva y, para ello, contará con la ayuda de la agente Eve.
             </p>
-            <p>Categoría: Acción</p>
+            <p class="descripcion_detalle">Categoría: Acción</p>
         </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>
-        <article>
-            <img id="RapFur" src="../img/accion/rapidos y furiosos.webp" alt="Rap y Fur">
-            <h3>Rápidos y Furiosos 6</h3>
-            <p>Rating: 7/10</p>
-            <p>Fecha: 23/05/2013</p>
-            <p>Duración: 2h 10m</p>
-            <p>
-                Sinopsis: El agente Hobbs les ofrece a Toretto y a su antiguo equipo el perdón total, si ellos lo ayudan a atrapar a una banda de conductores mercenarios cuyo líder es Shaw, y la segunda al mando es alguien a quien todos ellos conocen.
-            </p>
-            <p>Categoría: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>    
-        <article>
-            <img id="Intocables" src="../img/accion/los intocables.jpeg" alt="Intocables">
-            <h3>Los Intocables</h3>
-            <p>Rating: 8.5/10</p>
-            <p>Fecha: 27/08/1987</p>
-            <p>Duración: 1h 59m</p>
-            <p>
-                Sinopsis: Chicago años 30. Basada en hechos reales, narra la historia del agente federal Elliot Ness y su implacable persecución del gángster Al Capone.
-            </p>
-            <p>Categoría: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>    
-        <article>
-            <img id="TG" src="../img/accion/top gun.jpeg" alt="Top Gun">
-            <h3>Top Gun</h3>
-            <p>Rating: 8/10</p>
-            <p>Fecha: 16/05/1986</p>
-            <p>Duración: 1h 40m</p>
-            <p>
-                Sinopsis: El joven piloto Maverick Mitchell es enviado a una prestigiosa escuela aérea, famosa por formar a los mejores pilotos de combate del país.
-            </p>
-            <p>Categoría: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>
-        <article>
-            <img id="duro" src="../img/accion/Durodematar.webp" alt="Duro de Matar">
-            <h3>Duro de Matar</h3>
-            <p>Rating: 6/10</p>
-            <p>Fecha: 15/12/1988</p>
-            <p>Duración: 2h 12m</p>
-            <p>
-                Sinopsis: Un grupo terrorista se apodera de un edificio de Los Ángeles y toma a un grupo de personas como rehenes. El policía de Nueva York John McClane consigue escapar del acoso terrorista. Aunque está solo y fuera de servicio, McClane decide enfrentarse a los secuestradores y se convierte en la única esperanza para los rehenes.
-            </p>
-            <p>Categoría: Acción</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>    
-        <article>
-            <img id="Rubias" src="../img/comedia/donde estan las rubias.jpeg" alt="Rubias">
-            <h3>¿Y dónde están las rubias?</h3>
-            <p>Rating: 6/10</p>
-            <p>Fecha: 23/06/2004</p>
-            <p>Duración: 1h 49m</p>
-            <p>
-                Sinopsis: Dos desafortunados agentes del FBI se hacen pasar por dos chicas, novatas en la alta sociedad para investigar una serie de secuestros. Pero mientras preparan su plan, descubren que irrumpir en la alta sociedad es mucho más duro de lo que creían.
-            </p>
-            <p>Categoría: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>    
-        <article>
-            <img id="Zohan" src="../img/comedia/no te metas con zohan.webp" alt="Zohan">
-            <h3>No te metas con Zohan</h3>
-            <p>Rating: 8/10</p>
-            <p>Fecha: 18/09/2008</p>
-            <p>Duración: 1h 53m</p>
-            <p>
-                Sinopsis: Zohan es un peculiar y muy competente agente israelí de los servicios secretos del Mossad que finge su muerte para poder trasladarse de Israel a Nueva York y cumplir allí el sueño de su vida: convertirse en peluquero y estilista. Aunque Zohan se ha propuesto olvidar su peligrosa vida como agente de la lucha antiterrorista, pronto se da cuenta de que no es tan sencillo.
-            </p>
-            <p>Categoría: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>    
-        <article>
-            <img id="Chiq" src="../img/comedia/chiquito pero peligroso.webp" alt="Peligroso">
-            <h3>Chiquito pero peligroso</h3>
-            <p>Rating: 7.5/10</p>
-            <p>Fecha: 14/07/2006</p>
-            <p>Duración: 1h 38m</p>
-            <p>
-                Sinopsis: Después de pasar varios años en la cárcel, Calvin Sims, un duro ladrón de joyas que no supera el metro de altura, decide retirarse del mundo del delito. Pero antes quiere dar un último gran golpe. De esta manera, él y su socio se preparan para robar un valioso diamante con un plan perfecto. Sin embargo, algo sale mal y deben esconder el objeto en el bolso de una desconocida.
-            </p>
-            <p>Categoría: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    <br>
-        <article>
-            <img id="Jill" src="../img/comedia/jack y jill.jpeg" alt="J&J">
-            <h3>Jack y Jill</h3>
-            <p>Rating: 6.5/10</p>
-            <p>Fecha: 16/02/2012</p>
-            <p>Duración: 1h 33m</p>
-            <p>
-                Sinopsis: Un padre de familia llamado Jack debe enfrentarse a un enorme problema: la llegada por Navidad de su odiada hermana Jill. La visita se alarga más de la cuenta, lo que les obligará a limar asperezas.
-            </p>
-            <p>Categoría: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
+    <main>
 
-        <article>
-            <img id="Soncomo" src="../img/comedia/son como niños.jpeg" alt="Como niños">
-            <h3>Son como niños</h3>
-            <p>Rating: 9/10</p>
-            <p>Fecha: 22/07/2010</p>
-            <p>Duración: 1h 42m</p>
-            <p>
-                Sinopsis: La muerte de su entrenador de baloncesto durante su infancia provoca la reunión de algunos viejos amigos, quienes se ven en el lugar en el que celebraron un campeonato años atrás. Los compañeros hablan sobre sus esposas y sus hijos, y descubren que la edad no necesariamente va de la mano con la madurez.
-            </p>
-            <p>Categoría: Comedia</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    
-        <article>
-            <img id="Scream" src="../img/terror/scream.png" alt="Scream">
-            <h3>Scream</h3>
-            <p>Rating: 8/10</p>
-            <p>Fecha: 11/09/1997</p>
-            <p>Duración: 1h 41m</p>
-            <p>
-                Sinopsis: Un asesino en serie, con máscara y disfraz negro, siembra el pánico entre los adolescentes de un pueblo californiano. Paralelamente, la joven Sidney Prescott atraviesa un mal momento: se cumple un año desde que murió su madre.
-            </p>
-            <p>Categoría: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    
-        <article>
-            <img id="It" src="../img/terror/it.jpeg" alt="IT">
-            <h3>IT</h3>
-            <p>Rating: 6/10</p>
-            <p>Fecha: 21/09/2017</p>
-            <p>Duración: 2h 15m</p>
-            <p>
-                Sinopsis: Varios niños de una pequeña ciudad del estado de Maine se alían para combatir a una entidad diabólica que adopta la forma de un payaso y desde hace mucho tiempo emerge cada 27 años para saciarse de sangre infantil.
-            </p>
-            <p>Categoría: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-    
-        <article>
-            <img id="Conjuro" src="../img/terror/el conjuro.jpeg" alt="Conjuro">
-            <h3>El Conjuro</h3>
-            <p>Rating: 8.5/10</p>
-            <p>Fecha: 08/08/2013</p>
-            <p>Duración: 1h 52m</p>
-            <p>
-                Sinopsis: Basada en hechos reales. Narra los encuentros sobrenaturales que vivió la familia Perron en su casa de Rhode Island a principios de los 70. Ed y Lorraine Warren, investigadores de renombre en el mundo de los fenómenos paranormales, acuden a la llamada de una familia aterrorizada por la presencia en su granja de un ser maligno.
-            </p>
-            <p>Categoría: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <article>
-            <img id="ELM" src="../img/terror/terror en la calle elm.jpeg" alt="Elm">
-            <h3>Pesadilla en la calle Elm</h3>
-            <p>Rating: 5.5/10</p>
-            <p>Fecha: 30/04/2010</p>
-            <p>Duración: 1h 31m</p>
-            <p>
-                Sinopsis: Varios jóvenes de una pequeña localidad tienen habitualmente pesadillas en las que son perseguidos por un hombre deformado por el fuego y que usa un guante terminado en afiladas cuchillas. Algunos de ellos comienzan a ser asesinados mientras duermen por este ser, que resulta ser un asesino al que los padres de estos jóvenes quemaron vivo hace varios años tras descubrir que había asesinado a varios niños.
-            </p>
-            <p>Categoría: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-        <article>
-            <img id="Exor" src="../img/terror/el exorcista.jpeg" alt="Exorcista">
-            <h3>El Exorcista</h3>
-            <p>Rating: 8/10</p>
-            <p>Fecha: 15/08/1974</p>
-            <p>Duración: 2h 12m</p>
-            <p>
-                Sinopsis: Adaptación de la novela de William Peter Blatty. Inspirada en un exorcismo real ocurrido en Washington en 1949. Regan, una niña de doce años, es víctima de fenómenos paranormales. Su madre, aterrorizada, tras someter a su hija a múltiples análisis médicos que no ofrecen ningún resultado, acude a un sacerdote con estudios de psiquiatría. Éste está convencido de que la niña es víctima de una posesión diabólica. Por eso, con la ayuda de otro sacerdote, decide practicar un exorcismo.
-            </p>
-            <p>Categoría: Terror</p>
-        </article>
-        <form action="./favorites.html" method="get">
-            <button type="submit">Añadir a favoritos</button>
-        </form>
-
-    </main>
-    <br>
-    <br>
 
     <footer>
-        <nav>
-            <p> <a class="barra" href="home.html">HOME |</a>
-                <a class="barra" href="genres.html"> GENEROS  |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
-            </p>    
-        </nav>
-     <img class="logo" src="../img/logo.png" alt="Logo">
+        <section class="footer">
+            <article class="nombres">Nazareno Flores Muñoz</article>
+            <article class="nombres">Luciano Setton</article>
+            <article class="nombres">Santiago Junco</article>
+        </section>
     </footer>
     
 </body>

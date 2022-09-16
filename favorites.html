@@ -4,35 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/favorites.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>FAVORITES</title>
 </head>
 
-<body>
-    <header>        
-        <nav>
-            <p> 
+<body class="body">
+    <header class="header_home">   
+
+        <nav class="nav">
+            <p class="barra"> 
                 <a class="barra" href="./home.html">HOME |</a>
                 <a class="barra" href="detail-movie.html">PELÍCULAS |</a>
                 <a class="barra" href="detail-serie.html">SERIES |</a>
-                <a class="barra" href="genres.html"> GENEROS |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
+                <a class="barra" href="genres.html"> GÉNEROS |</a>
+                <a class="barra" href="favorites.html"> FAVORITOS </a>
             </p>
         </nav>
-        <img class="logo" src="../img/logo.png" alt="Logo">
-        <form action="./search-results.html">
-            <input placeholder="Resultados de búsqueda" type="text">
+
+        <img class="logo" src="./img/logo.png" alt="Logo">
+
+        <form class="formulario" action="./search-results.html">
+            <input class="busqueda" placeholder="Búsqueda" type="text">
         </form>
-    </header>    
+
+    </header>   
+    
+    <main>
+
+        <h2 class="titulos">LISTA DE FAVORITOS</h2>  
+
+            <section class="listadohome_detalle_generos"> 
+                <article class="fotos">
+                    <img class="img_tarjeta" src="./img/accion/top gun.jpeg" alt="Top Gun">
+                    <p class="descripcion"><a class="links" href="detail-movie.html">Top Gun</a></p>
+                    <p class="descripcion">Fecha: 16/05/1986</p>     
+                </article>
+
+                <article class="fotos">
+                    <img class="img_tarjeta" src="./img/terror/scream.png" alt="Scream">
+                    <p class="descripcion"><a class="links" href="detail-movie.html">Scream</a></p>
+                    <p class="descripcion">Fecha: 11/09/1997</p>      
+                </article>
+
+                <article class="fotos">
+                    <img class="img_tarjeta" src="./img/accion/los intocables.jpeg" alt="Intocables">
+                    <p class="descripcion"><a class="links" href="detail-movie.html">Los Intocables</a></p>
+                    <p class="descripcion">Fecha: 27/08/1987</p>      
+                </article>
+
+                <article class="fotos">
+                    <img class="img_tarjeta" src="./img/terror/el conjuro.jpeg" alt="Conjuro">
+                    <p class="descripcion"><a class="links" href="detail-movie.html">El Conjuro</a></p>
+                    <p class="descripcion">Fecha: 08/08/2013</p>      
+                </article>
+
+                <article class="fotos">
+                    <img class="img_tarjeta" src="./img/comedia/donde estan las rubias.jpeg" alt="Rubias">
+                    <p class="descripcion"><a class="links" href="detail-movie.html">¿Y dónde están las rubias?</a></p>
+                    <p class="descripcion">Fecha: 23/06/2004</p>     
+                </article> 
+            </section>
+    </main>
     
     <footer>
-        <nav>
-            <p> <a class="barra" href="home.html">HOME |</a>
-                <a class="barra" href="genres.html"> GENEROS  |</a>
-                <a class="barra" href="favorites.html"> FAVORITOS |</a>
-            </p>    
-        </nav>
-     <img class="logo" src="../img/logo.png" alt="Logo">
+        <section class="footer">
+            <article class="nombres">Nazareno Flores Muñoz</article>
+            <article class="nombres">Luciano Setton</article>
+            <article class="nombres">Santiago Junco</article>
+        </section>
     </footer>
 </body>
 </html>

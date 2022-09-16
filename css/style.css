@@ -14,7 +14,7 @@
     border-radius: 20px;
     }
     
-.listadohome{
+.listadohome_detalle_generos{
     display: flex;
     justify-content: space-between;
     padding: 30px;
@@ -41,7 +41,6 @@
     
 .logo{
     height: 160px;
-    width: 120px;
     order: -1;
     padding: 12px;
     border-radius: 20px;
@@ -88,4 +87,95 @@
 .barra{
     color: white;
     text-decoration: none;
+}
+
+.fotos{
+    width: 150px;
+}
+
+.img_detalle{
+    width: 150px;
+    height: 250px;
+    border-radius: 20px;
+}
+
+.detalles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-color: rgba(128, 128, 128, 0.425);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 200px;
+    margin-left: 200px;
+    border-radius: 20px;
+    
+}
+
+.descripcion_detalle{
+    text-align: center;
+    color: white;
+}
+
+.genero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 200px;
+    padding-right: 200px;
+    background-color: rgba(128, 128, 128, 0.425);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 400px;
+    margin-left: 400px;
+    border-radius: 20px;
+}
+
+.listas_generos{
+    list-style-type: none;
+}
+
+.hijas_listas_generos{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.548);
+    margin: 20px;
+    border-radius: 20px;
+}
+
+.listado_detalle_generos{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: rgba(128, 128, 128, 0.425);
+    border-radius: 20px;
+}
+
+.footer{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.541);
+    padding: 20px;
+}
+
+.nombres{
+    color: white;
+    background-color: rgba(128, 128, 128, 0.685);
+    border-radius: 20px;
+    padding:20px
 }
