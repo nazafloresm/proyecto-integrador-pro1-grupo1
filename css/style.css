@@ -1,181 +1,270 @@
-*{box-sizing: border-box;}
-
-.body{
-    margin: 0px;
-    background: #2C3E50;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+* {
+  box-sizing: border-box;
 }
 
-.img_tarjeta{
-    width: 150px;
-    height: 250px;
-    border-radius: 20px;
-    }
-    
-.listadohome_detalle_generos{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 100px;
-    margin-left: 100px;
-    background-color: rgba(128, 128, 128, 0.425);
-    border-radius: 20px;
-    }
-    
-.header_home{
-    background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgba(0, 0, 255, 0.541);
-    }
-    
-.logo{
-    height: 160px;
-    order: -1;
-    padding: 12px;
-    border-radius: 20px;
-    }
-
-.nav{
-    display: flex;
-    order: 0;
-    background-color: rgba(17, 194, 185, 0.575);
-    border-radius: 20px;
-    padding: 12px
-    }
-    
-.formulario{
-    order: 1;
-    padding: 12px;
-    }
-
-.titulos{
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    }   
-
-.descripcion{
-    text-align: center;
-    color: white;
-    }
-
-.links{
-    text-decoration: none;
-    font-weight: bold;
-    color: white;
-    }
-
-.busqueda{
-    text-align: center;
-    }
-
-.boton{
-    border-radius: 5px;
-    }
-
-.barra{
-    color: white;
-    text-decoration: none;
+.body {
+  margin: 0px;
+  background: #2c3e50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4ca1af,
+    #2c3e50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4ca1af,
+    #2c3e50
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.fotos{
-    width: 150px;
+.img_tarjeta {
+  width: 150px;
+  height: 250px;
+  border-radius: 20px;
 }
 
-.img_detalle{
-    width: 150px;
-    height: 250px;
-    border-radius: 20px;
+.listado_detalle_generos-Favoritos-home-search {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 100px;
+  margin-left: 100px;
+  background-color: rgba(128, 128, 128, 0.425);
+  border-radius: 20px;
 }
 
-.detalles{
+
+.header_home {
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.541);
+}
+
+.logo {
+  height: 160px;
+  order: -1;
+  padding: 12px;
+  border-radius: 20px;
+}
+
+.nav {
+  display: flex;
+  order: 0;
+  background-color: rgba(17, 194, 185, 0.575);
+  border-radius: 20px;
+  padding: 12px;
+}
+
+.formulario {
+  order: 1;
+  padding: 12px;
+}
+
+.oculto {
+  display: none;
+}
+
+.titulos {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+
+.descripcion {
+  text-align: center;
+  color: white;
+}
+
+.links {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+.busqueda {
+  text-align: center;
+}
+
+.boton {
+  border-radius: 5px;
+}
+
+.barra {
+  color: white;
+  text-decoration: none;
+}
+
+.fotos {
+  width: 150px;
+}
+
+.img_detalle {
+  width: 150px;
+  height: 250px;
+  border-radius: 20px;
+}
+
+.detalles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: rgba(128, 128, 128, 0.425);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 200px;
+  margin-left: 200px;
+  border-radius: 20px;
+}
+
+.descripcion_detalle {
+  text-align: center;
+  color: white;
+}
+
+.genero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: rgba(128, 128, 128, 0.425);
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 400px;
+  margin-left: 400px;
+  border-radius: 20px;
+}
+
+.listas_generos {
+  list-style-type: none;
+}
+
+.hijas_listas_generos {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.548);
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.footer {
+  background: #c31432; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #240b36,
+    #c31432
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(0, 0, 255, 0.541);
+  padding: 20px;
+}
+
+.nombres {
+  color: white;
+  background-color: rgba(128, 128, 128, 0.685);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 390px) {
+  .header_home {
+    width: 100%;
+    flex-direction: column;
+  }
+  .logo {
+    width: 20%;
+    height: 20%;
+  }
+  .nav {
+    width: 90%;
+    height: 5%;
+  }
+  .barra {
+    font-size: 13px;
+  }
+  .body {
     display: flex;
     flex-direction: column;
+  }
+  .listado_detalle_generos-Favoritos-home-search {
+    justify-content: center;
+    margin: 0;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    background-color: rgba(128, 128, 128, 0.425);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 200px;
-    margin-left: 200px;
-    border-radius: 20px;
-    
+    flex-direction: column;
+    background-color: transparent;
 }
+  
 
-.descripcion_detalle{
-    text-align: center;
-    color: white;
-}
+  .fotos {
+    padding-bottom: 10px;
+  }
+  .footer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .nombres {
+    margin: 10px;
+  }
 
-.genero{
-    display: flex;
+  .genero {
+    padding: 0;
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .listas_generos {
+    padding: 0;
+  }
+
+  .detalles {
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
-    background-color: rgba(128, 128, 128, 0.425);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 400px;
-    margin-left: 400px;
-    border-radius: 20px;
+    background-color: transparent;
+    margin: 0;
+}
 }
 
-.listas_generos{
-    list-style-type: none;
-}
 
-.hijas_listas_generos{
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.548);
-    margin: 20px;
-    border-radius: 20px;
-}
 
-.listado_detalle_generos{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    margin-top: 40px;
-    margin-bottom: 40px;
-    margin-right: 100px;
-    margin-left: 100px;
-    background-color: rgba(128, 128, 128, 0.425);
-    border-radius: 20px;
-}
 
-.footer{
-    background: #c31432;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: rgba(0, 0, 255, 0.541);
-    padding: 20px;
-}
 
-.nombres{
-    color: white;
-    background-color: rgba(128, 128, 128, 0.685);
-    border-radius: 20px;
-    padding:20px
-}
