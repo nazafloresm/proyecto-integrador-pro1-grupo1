@@ -1,39 +1,91 @@
 *{box-sizing: border-box;}
 
-
+.body{
+    margin: 0px;
+    background: #2C3E50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4CA1AF, #2C3E50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4CA1AF, #2C3E50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
 .img_tarjeta{
     width: 150px;
     height: 250px;
+    border-radius: 20px;
     }
     
-    .listadohome{
+.listadohome{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 100px;
+    margin-left: 100px;
+    background-color: rgba(128, 128, 128, 0.425);
+    border-radius: 20px;
     }
     
-    .header_home{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background-color: rgba(0, 0, 255, 0.541);
-        width: 100%;
+.header_home{
+    background: #c31432;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 255, 0.541);
     }
     
-    .logo{
-        height: 160px;
-        width: 120px;
-        order: -1;
+.logo{
+    height: 160px;
+    width: 120px;
+    order: -1;
+    padding: 12px;
+    border-radius: 20px;
     }
 
-    .nav{
-        order: 0;
-        background-color: rgba(17, 194, 185, 0.575);
+.nav{
+    display: flex;
+    order: 0;
+    background-color: rgba(17, 194, 185, 0.575);
+    border-radius: 20px;
+    padding: 12px
+    }
+    
+.formulario{
+    order: 1;
+    padding: 12px;
     }
 
-    .formulario{
-        order: 1;
+.titulos{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    }   
+
+.descripcion{
+    text-align: center;
+    color: white;
     }
 
+.links{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    }
+
+.busqueda{
+    text-align: center;
+    }
+
+.boton{
+    border-radius: 5px;
+    }
+
+.barra{
+    color: white;
+    text-decoration: none;
+}
