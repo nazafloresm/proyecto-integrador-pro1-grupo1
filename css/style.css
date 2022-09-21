@@ -38,7 +38,7 @@
 }
 
 
-.header_home {
+.header {
   background: #c31432; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -199,6 +199,13 @@
   padding: 20px;
 }
 
+.lista_nav{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+}
+
 
 
 
@@ -207,7 +214,7 @@
 
 
 @media (max-width: 390px) {
-  .header_home {
+  .header {
     width: 100%;
     flex-direction: column;
   }
@@ -215,10 +222,7 @@
     width: 20%;
     height: 20%;
   }
-  .nav {
-    width: 90%;
-    height: 5%;
-  }
+  
   .barra {
     font-size: 13px;
   }
