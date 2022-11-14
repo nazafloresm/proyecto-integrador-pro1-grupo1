@@ -25,6 +25,12 @@
   border-radius: 20px;
 }
 
+.logoFooter{
+  width: 150px;
+  height: 250px;
+  border-radius: 20px;
+}
+
 .listado_detalle_generos-Favoritos-home-search {
   display: flex;
   justify-content: space-between;

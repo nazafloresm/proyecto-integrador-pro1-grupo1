@@ -40,7 +40,7 @@ fetch(SeriesPopulares)
 })
 
 .then(function(data){
-    console.log(data);
+    console.log(data.results);
     let series = data.results
     let informacion = ""
     for (let i=0; i<5; i++){
@@ -66,13 +66,13 @@ fetch(PeliculasValoradas)
 })
 
 .then(function(data){
-    console.log(data);
+    console.log(data.results);
     let PeliculasValoradas = data.results
     let informacion = ""
     for (let i=0; i<5; i++){
-        informacion+=`<a href="./detail-movie.html?id=${peliculas[i].id}"><article class="fotos">
+        informacion+=`<a href="./detail-movie.html?id=${PeliculasValoradas[i].id}"><article class="fotos">
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${PeliculasValoradas[i].poster_path}" alt="${PeliculasValoradas[i].original_title}">
-        <p class="descripcion"><a class="links" href="./detail-serie.html">${PeliculasValoradas[i].title}</a></p>
+        <p class="descripcion"><a class="links" href="./detail-movie.html">${PeliculasValoradas[i].title}</a></p>
         <p class="descripcion">Fecha: ${PeliculasValoradas[i].release_date}</p>
         <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
             <button class="boton" type="submit">Añadir a Favoritos</button>
