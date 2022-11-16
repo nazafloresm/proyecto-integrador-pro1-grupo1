@@ -2,7 +2,7 @@ let qs = location.search;
 let qsToObj = new URLSearchParams(qs)
 let id = qsToObj.get('id')
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
-let urlProviders = `https://api.themoviedb.org/3/watch/providers/movie?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
+let urlProviders = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=700a3a180300423956be7a6dd87ae8b8`
 let article = document.querySelector('#detalles1')
 let article2 = document.querySelector('#detalles2')
 
@@ -14,28 +14,6 @@ fetch(url)
 
 .then(function(data){
     console.log(data)
-
-    fetch(urlProviders)
-    .then(function(response){
-        return response.json()
-    })
-
-    .then(function(data2){
-    console.log(data2.results)
-
-    let provedores = data2.results
-    let infoProvedores = ""
-    for (let i=0; i < 3; i++){
-        infoProvedores+= `<p class="descripcion_detalle">
-        ${provedores[i]['provider_name']}
-    </p>`
-    article2.innerHTML=infoProvedores
-    }
-    }
-    )
-
-    .catch(function(error){
-    })
 
     let generos = data.genres
     let informacion = ""
@@ -64,3 +42,30 @@ fetch(url)
 .catch(function(error){  
 }
 )
+
+fetch(urlProviders)
+    .then(function(response){
+        return response.json()
+    })
+
+    .then(function(data){
+    console.log(data.results.US.buy)
+
+    if (data.results.US.buy.length >0){
+
+        let provedores = data.results.US.buy
+    let infoProvedores = ""
+
+    for (let i=0; i < provedores.length; i++){
+        infoProvedores+= `<p class="descripcion_detalle">
+        ${provedores[i]['provider_name']}</p>`}
+    article2.innerHTML=infoProvedores
+    }
+    else{
+        article2.innerHTML=`<p>
+        No hay provedores disponibles</p>`
+    }
+    })
+
+    .catch(function(error){
+    })

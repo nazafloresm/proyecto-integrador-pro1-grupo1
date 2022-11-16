@@ -2,7 +2,7 @@ let qs = location.search;
 let qsToObj = new URLSearchParams(qs)
 let id = qsToObj.get('id')
 let url = `https://api.themoviedb.org/3/tv/${id}?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
-let urlProviders = `https://api.themoviedb.org/3/watch/providers/tv?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
+let urlProviders = `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=700a3a180300423956be7a6dd87ae8b8`
 let article = document.querySelector('#detalles1')
 let article2 = document.querySelector('#detalles2')
 
@@ -15,34 +15,11 @@ fetch(url)
 .then(function(data){
     console.log(data)
 
-    fetch(urlProviders)
-    .then(function(response){
-        return response.json()
-    })
-
-    .then(function(data2){
-    console.log(data2.results)
-
-    let provedores = data2.results
-    let infoProvedores = ""
-    for (let i=0; i < 3; i++){
-        infoProvedores+= `<p class="descripcion_detalle">
-        ${provedores[i]['provider_name']}
-    </p>`
-    article2.innerHTML=infoProvedores
-    }
-    }
-    )
-
-    .catch(function(error){
-    })
-
     let generos = data.genres
     let informacion = ""
     for (let i=0; i< generos.length; i++){
         informacion+= `<p class="descripcion_detalle">
-        ${generos[i]['name']}
-    </p>`
+        ${generos[i]['name']}</p>`
     }
 
     let articulo = `<img class="img_detalle" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.original_name}">
@@ -65,3 +42,28 @@ fetch(url)
     
 }
 )
+
+fetch(urlProviders)
+    .then(function(response){
+        return response.json()
+    })
+
+    .then(function(data){
+    console.log(data.results.MX.flatrate)
+
+    if (data.results.MX.flatrate.length > 0){
+        let provedores = data.results.MX.flatrate
+    let infoProvedores = ""
+
+    for (let i=0; i < provedores.length; i++){
+        infoProvedores+= `<p class="descripcion_detalle">
+        ${provedores[i]['provider_name']}</p>`
+    }
+    article2.innerHTML=infoProvedores
+    }
+    else{
+        article2.innerHTML= `<p>No hay provedores disponibles</p>`
+    }
+    })
+    .catch(function(error){
+    })

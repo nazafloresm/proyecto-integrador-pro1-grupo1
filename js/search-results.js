@@ -50,7 +50,7 @@ fetch(urlSeries)
     let series = data.results
     let informacion = ""
     for (let i=0; i<5; i++){
-        informacion+=`<a href="./detail-serie.html?id=${series[i].original_name}"><article class="fotos">
+        informacion+=`<a href="./detail-serie.html?id=${series[i].id}"><article class="fotos">
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${series[i].poster_path}" alt="${series[i].original_name}">
         <p class="descripcion"><a class="links" href="./detail-serie.html">${series[i].original_name}</a></p>
         <p class="descripcion">Fecha: ${series[i].first_air_date}</p>
