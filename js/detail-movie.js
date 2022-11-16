@@ -4,9 +4,20 @@ let id = qsToObj.get('id')
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
 let urlProviders = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=700a3a180300423956be7a6dd87ae8b8`
 let verRecomendaciones= `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
-let article = document.querySelector('#detalles1')
+
+
 let article2 = document.querySelector('#detalles2')
 let seccion = document.querySelector('#detalles3')
+
+let nombre = document.querySelector('.nombre')
+let imagen = document.querySelector('.peliculaImg')
+let rating = document.querySelector('.rating')
+let fecha = document.querySelector('.fecha')
+let duracion = document.querySelector('.duracion')
+let sinopsis = document.querySelector('.sinopsis')
+let genero = document.querySelector('.genero')
+
+
 
 fetch(url)
 .then(function(response){
@@ -20,24 +31,18 @@ fetch(url)
     let generos = data.genres
     let informacion = ""
     for (let i=0; i< generos.length; i++){
-        informacion+= `<p class="descripcion_detalle">
-        ${generos[i]['name']}
-    </p>`
+        informacion+= `<a href="./detail-genres.html" class="links"><p class="descripcion_detalle">
+        Género: ${generos[i]['name']}</p></a>`
     }
 
-    let articulo = `<img class="img_detalle" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.original_title}">
-                <h3 class="descripcion_detalle nombre">${data.original_title}</h3>
-                <p class="descripcion_detalle rating">Rating: ${data.vote_average}</p>
-                <p class="descripcion_detalle fecha">Fecha: ${data.release_date}</p>
-                <p class="descripcion_detalle duracion">Duración (min): ${data.runtime}</p>
-                <p class="descripcion_detalle sinopsis">
-                    Sinopsis: ${data.overview}
-                </p>
-                <p class="descripcion_detalle genero">Géneros:<a href="./detail-genres.html" class="links">${informacion}</a></p>
-                <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
-                    <button class="boton" type="submit">Añadir a Favoritos</button>
-                </form>`
-    article.innerHTML = articulo
+    imagen.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`
+    nombre.innerText = data.original_title
+    rating.innerText = `Rating: ${data.vote_average}`
+    fecha.innerText = `Fecha: ${data.release_date}`
+    duracion.innerText = `Duración (min): ${data.runtime}`
+    sinopsis.innerText = `Sinopsis: ${data.overview}`
+    genero.innerHTML = informacion
+
 }
 )
 
@@ -46,16 +51,16 @@ fetch(url)
 )
 
 fetch(urlProviders)
-    .then(function(response){
-        return response.json()
+.then(function(response){
+    return response.json()
     })
 
-    .then(function(data){
+.then(function(data){
     console.log(data.results.US.buy)
 
     if (data.results.US.buy.length >0){
 
-        let provedores = data.results.US.buy
+    let provedores = data.results.US.buy
     let infoProvedores = ""
 
     for (let i=0; i < provedores.length; i++){
@@ -70,29 +75,29 @@ fetch(urlProviders)
     }
     })
 
-    .catch(function(error){
-    })
+.catch(function(error){
+})
 
 
-    fetch(verRecomendaciones)
+fetch(verRecomendaciones)
 
-    .then(function(response){
-        return response.json()
+.then(function(response){
+    return response.json()
     })
     
-    .then(function(data){
-        console.log(data.results)
-        let recomendaciones = data.results
-        let informacion = ""
-        for (let i=0; i < 3; i++){
-            informacion+= `<a href="./detail-movie.html?id=${recomendaciones[i].id}"><article class="fotos">
-            <h3 class="titulos">Recomendación</h3>
-            <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${recomendaciones[i].poster_path}" alt="${recomendaciones[i].title}">
+.then(function(data){
+    console.log(data.results)
+    let recomendaciones = data.results
+    let informacion = ""
+    for (let i=0; i < 3; i++){
+        informacion+= `<article class="fotos">
+        <h3 class="titulos">Recomendación</h3>
+        <a href="./detail-movie.html?id=${recomendaciones[i].id}"> <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${recomendaciones[i].poster_path}" alt="${recomendaciones[i].title}">
         </article></a>`
         }
         seccion.innerHTML = informacion
     
     })
     
-    .catch(function(error){  
-    })
+.catch(function(error){  
+})

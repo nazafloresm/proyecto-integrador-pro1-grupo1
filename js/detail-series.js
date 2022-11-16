@@ -3,8 +3,18 @@ let qsToObj = new URLSearchParams(qs)
 let id = qsToObj.get('id')
 let url = `https://api.themoviedb.org/3/tv/${id}?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
 let urlProviders = `https://api.themoviedb.org/3/tv/${id}/watch/providers?api_key=700a3a180300423956be7a6dd87ae8b8`
-let article = document.querySelector('#detalles1')
+let verRecomendaciones= `https://api.themoviedb.org/3/tv/${id}/recommendations?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
+
+
 let article2 = document.querySelector('#detalles2')
+let seccion = document.querySelector('#detalles3')
+
+let nombre = document.querySelector('.nombre')
+let imagen = document.querySelector('.serieImg')
+let rating = document.querySelector('.rating')
+let fecha = document.querySelector('.fecha')
+let sinopsis = document.querySelector('.sinopsis')
+let genero = document.querySelector('.genero')
 
 fetch(url)
 .then(function(response){
@@ -18,23 +28,16 @@ fetch(url)
     let generos = data.genres
     let informacion = ""
     for (let i=0; i< generos.length; i++){
-        informacion+= `<p class="descripcion_detalle">
-        ${generos[i]['name']}</p>`
+        informacion+= `<a href="./detail-genres.html" class="links"><p class="descripcion_detalle">
+        Género: ${generos[i]['name']}</p></a>`
     }
 
-    let articulo = `<img class="img_detalle" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.original_name}">
-                <h3 class="descripcion_detalle nombre">${data.original_name}</h3>
-                <p class="descripcion_detalle rating">Rating: ${data.vote_average}</p>
-                <p class="descripcion_detalle fecha">Fecha de estreno: ${data.first_air_date}</p>
-                <p class="descripcion_detalle sinopsis">
-                    Sinopsis: ${data.overview}
-                </p>
-                <p class="descripcion_detalle genero">Géneros:<a href="./detail-genres.html" class="links">${informacion}</a></p>
-                <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
-                    <button class="boton" type="submit">Añadir a Favoritos</button>
-                </form>`
-    article.innerHTML = articulo
-
+    imagen.src = `https://image.tmdb.org/t/p/w500${data.poster_path}`
+    nombre.innerText = data.original_name
+    rating.innerText = `Rating: ${data.vote_average}`
+    fecha.innerText = `Fecha: ${data.first_air_date}`
+    sinopsis.innerText = `Sinopsis: ${data.overview}`
+    genero.innerHTML = informacion
 }
 )
 
@@ -44,11 +47,11 @@ fetch(url)
 )
 
 fetch(urlProviders)
-    .then(function(response){
-        return response.json()
-    })
+.then(function(response){
+    return response.json()
+})
 
-    .then(function(data){
+.then(function(data){
     console.log(data.results.MX.flatrate)
 
     if (data.results.MX.flatrate.length > 0){
@@ -57,13 +60,37 @@ fetch(urlProviders)
 
     for (let i=0; i < provedores.length; i++){
         infoProvedores+= `<p class="descripcion_detalle">
-        ${provedores[i]['provider_name']}</p>`
+        ${provedores[i]['provider_name']}</p>
+        <img class="provedor" src="https://image.tmdb.org/t/p/w500${provedores[i]['logo_path']}" alt="">`
     }
     article2.innerHTML=infoProvedores
     }
     else{
         article2.innerHTML= `<p>No hay provedores disponibles</p>`
     }
-    })
-    .catch(function(error){
-    })
+})
+.catch(function(error){
+})
+
+
+fetch(verRecomendaciones)
+
+.then(function(response){
+    return response.json()
+})
+        
+.then(function(data){
+    console.log(data.results)
+    let recomendaciones = data.results
+    let informacion = ""
+    for (let i=0; i < 3; i++){
+        informacion+= `<article class="fotos">
+        <h3 class="titulos">Recomendación</h3>
+        <a href="./detail-serie.html?id=${recomendaciones[i].id}"> <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${recomendaciones[i].poster_path}" alt="${recomendaciones[i].original_name}">
+        </article></a>`
+        }
+        seccion.innerHTML = informacion
+        })
+        
+.catch(function(error){  
+})
