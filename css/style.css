@@ -31,6 +31,12 @@
   border-radius: 20px;
 }
 
+.provedor{
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
 .listado_detalle_generos-Favoritos-home-search {
   display: flex;
   justify-content: space-between;

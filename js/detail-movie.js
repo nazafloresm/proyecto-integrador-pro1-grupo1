@@ -3,8 +3,10 @@ let qsToObj = new URLSearchParams(qs)
 let id = qsToObj.get('id')
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
 let urlProviders = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=700a3a180300423956be7a6dd87ae8b8`
+let verRecomendaciones= `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
 let article = document.querySelector('#detalles1')
 let article2 = document.querySelector('#detalles2')
+let seccion = document.querySelector('#detalles3')
 
 fetch(url)
 .then(function(response){
@@ -58,7 +60,8 @@ fetch(urlProviders)
 
     for (let i=0; i < provedores.length; i++){
         infoProvedores+= `<p class="descripcion_detalle">
-        ${provedores[i]['provider_name']}</p>`}
+        ${provedores[i]['provider_name']}</p>
+        <img class="provedor" src="https://image.tmdb.org/t/p/w500${provedores[i]['logo_path']}" alt="">`}
     article2.innerHTML=infoProvedores
     }
     else{
@@ -68,4 +71,28 @@ fetch(urlProviders)
     })
 
     .catch(function(error){
+    })
+
+
+    fetch(verRecomendaciones)
+
+    .then(function(response){
+        return response.json()
+    })
+    
+    .then(function(data){
+        console.log(data.results)
+        let recomendaciones = data.results
+        let informacion = ""
+        for (let i=0; i < 3; i++){
+            informacion+= `<a href="./detail-movie.html?id=${recomendaciones[i].id}"><article class="fotos">
+            <h3 class="titulos">Recomendación</h3>
+            <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${recomendaciones[i].poster_path}" alt="${recomendaciones[i].title}">
+        </article></a>`
+        }
+        seccion.innerHTML = informacion
+    
+    })
+    
+    .catch(function(error){  
     })
