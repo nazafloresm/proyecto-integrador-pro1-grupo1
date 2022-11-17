@@ -6,8 +6,8 @@ let urlProviders = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api
 let verRecomendaciones= `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
 
 
-let article2 = document.querySelector('#detalles2')
-let seccion = document.querySelector('#detalles3')
+let seccion = document.querySelector('#detalles2')
+let seccion2 = document.querySelector('#detalles3')
 
 let nombre = document.querySelector('.nombre')
 let imagen = document.querySelector('.peliculaImg')
@@ -31,7 +31,7 @@ fetch(url)
     let generos = data.genres
     let informacion = ""
     for (let i=0; i< generos.length; i++){
-        informacion+= `<a href="./detail-genres.html" class="links"><p class="descripcion_detalle">
+        informacion+= `<a href="./detail-genres.html?id=${data.genres[i].id}" class="links"><p class="descripcion_detalle">
         Género: ${generos[i]['name']}</p></a>`
     }
 
@@ -67,10 +67,10 @@ fetch(urlProviders)
         infoProvedores+= `<p class="descripcion_detalle">
         ${provedores[i]['provider_name']}</p>
         <img class="provedor" src="https://image.tmdb.org/t/p/w500${provedores[i]['logo_path']}" alt="">`}
-    article2.innerHTML=infoProvedores
+    seccion.innerHTML=infoProvedores
     }
     else{
-        article2.innerHTML=`<p>
+        seccion.innerHTML=`<p>
         No hay provedores disponibles</p>`
     }
     })
@@ -95,7 +95,7 @@ fetch(verRecomendaciones)
         <a href="./detail-movie.html?id=${recomendaciones[i].id}"> <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${recomendaciones[i].poster_path}" alt="${recomendaciones[i].title}">
         </article></a>`
         }
-        seccion.innerHTML = informacion
+        seccion2.innerHTML = informacion
     
     })
     

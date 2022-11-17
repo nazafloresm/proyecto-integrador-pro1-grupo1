@@ -22,7 +22,7 @@ fetch(urlMovies)
     for (let i=0; i<5; i++){
         informacion+=`<a href="./detail-movie.html?id=${peliculas[i].id}"><article class="fotos">
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" alt="${peliculas[i].title}">
-        <p class="descripcion"><a class="links" href="./detail-movie.html">${peliculas[i].title}</a></p>
+        <p class="descripcion"><a class="links" href="./detail-movie.html?id=${peliculas[i].id}">${peliculas[i].title}</a></p>
         <p class="descripcion">Fecha: ${peliculas[i].release_date}</p>
         <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
             <button class="boton" type="submit">Añadir a Favoritos</button>
@@ -52,11 +52,8 @@ fetch(urlSeries)
     for (let i=0; i<5; i++){
         informacion+=`<a href="./detail-serie.html?id=${series[i].id}"><article class="fotos">
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${series[i].poster_path}" alt="${series[i].original_name}">
-        <p class="descripcion"><a class="links" href="./detail-serie.html">${series[i].original_name}</a></p>
+        <p class="descripcion"><a class="links" href="./detail-serie.html?id=${series[i].id}">${series[i].original_name}</a></p>
         <p class="descripcion">Fecha: ${series[i].first_air_date}</p>
-        <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
-            <button class="boton" type="submit">Añadir a Favoritos</button>
-        </form>
     </article></a>`}
     seccion2.innerHTML=informacion
     titulo.innerText = `Resultados de búsqueda para: ${resultadoBusqueda}`
