@@ -95,3 +95,14 @@ fetch(verRecomendaciones)
         
 .catch(function(error){  
 })
+
+let favoritosSeries = []
+let recuperoStorage = localStorage.getItem('favoritosSeries')
+
+if (recuperoStorage != null){
+    favoritosSeries = JSON.parse(recuperoStorage)
+}
+
+if (favoritosSeries.includes(id)){
+    boton.innerText = "Quitar de favoritos"
+}
