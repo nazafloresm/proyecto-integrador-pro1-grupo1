@@ -22,8 +22,9 @@ fetch(PeliculasPopulares)
         <p class="descripcion"><a class="links" href="./detail-movie.html?id=${peliculas[i].id}">${peliculas[i].title}</a></p>
         <p class="descripcion">Estreno: ${peliculas[i].release_date}</p>
     </article></a>`
-    section.innerHTML = informacion
     }
+    section.innerHTML = informacion
+    return data
 }
 ) 
 .catch(function(error){
@@ -46,8 +47,9 @@ fetch(SeriesPopulares)
         <p class="descripcion"><a class="links" href="./detail-serie.html?id=${series[i].id}">${series[i].name}</a></p>
         <p class="descripcion">Estreno: ${series[i].first_air_date}</p>
     </article></a>`
-    section2.innerHTML = informacion
     }
+    section2.innerHTML = informacion
+    return data
 }
 ) 
 .catch(function(error){
@@ -69,8 +71,9 @@ fetch(PeliculasValoradas)
         <p class="descripcion"><a class="links" href="./detail-movie.html?id=${PeliculasValoradas[i].id}">${PeliculasValoradas[i].title}</a></p>
         <p class="descripcion">Estreno: ${PeliculasValoradas[i].release_date}</p>
     </article></a>`
-    section3.innerHTML = informacion
     }
+    section3.innerHTML = informacion
+    return data
 }
 ) 
 .catch(function(error){

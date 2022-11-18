@@ -23,8 +23,8 @@ fetch(urlMovieDiscover)
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" alt="${peliculas[i].original_title}">
         <p class="descripcion"><a class="links" href="./detail-movie.html?id=${peliculas[i].id}">${peliculas[i].original_title}</a></p>
         <p class="descripcion">Estreno: ${peliculas[i].release_date}</p>
-    </article></a>`
-    peliculasGenero.innerHTML = informacion}
+    </article></a>`}
+    peliculasGenero.innerHTML = informacion
     }
     else{
         peliculasGenero.innerHTML = `<p>No hay resultados para su búsqueda</p>`
@@ -51,8 +51,8 @@ fetch(urlSerieDiscover)
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${series[i].poster_path}" alt="${series[i].original_name}">
         <p class="descripcion"><a class="links" href="./detail-movie.html?id=${series[i].id}">${series[i].original_name}</a></p>
         <p class="descripcion">Estreno: ${series[i].first_air_date}</p>
-    </article></a>`
-    seriesGenero.innerHTML = informacion}
+    </article></a>`}
+    seriesGenero.innerHTML = informacion
     }
     else{
         seriesGenero.innerHTML = `<p>No hay resultados para su búsqueda</p>`

@@ -24,13 +24,14 @@ fetch(urlMovies)
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" alt="${peliculas[i].title}">
         <p class="descripcion"><a class="links" href="./detail-movie.html?id=${peliculas[i].id}">${peliculas[i].title}</a></p>
         <p class="descripcion">Fecha: ${peliculas[i].release_date}</p>
-    </article></a>`
+    </article></a>`}
     seccion.innerHTML = informacion
-    titulo.innerText = `Resultados de búsqueda para: ${resultadoBusqueda}`}
+    titulo.innerText = `Resultados de búsqueda para: ${resultadoBusqueda}`
     }
     else{
         seccion.innerHTML = `<p>No hay resultados para su búsqueda</p>`
     }
+    return data
 })
 .catch(function(error){
     console.log(error);
@@ -54,10 +55,11 @@ fetch(urlSeries)
     </article></a>`}
     seccion2.innerHTML=informacion
     titulo.innerText = `Resultados de búsqueda para: ${resultadoBusqueda}`
-}
-else{
+    }
+    else{
     seccion2.innerHTML = `<p>No hay resultados para su búsqueda</p>`
-}
+    }
+    return data
 }) 
 .catch(function(error){
     console.log(error);

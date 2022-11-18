@@ -69,7 +69,7 @@ fetch(urlProviders)
         infoProvedores+= `<p class="descripcion_detalle">
         ${provedores[i]['provider_name']}</p>
         <img class="provedor" src="https://image.tmdb.org/t/p/w500${provedores[i]['logo_path']}" alt="">`}
-    seccion.innerHTML=infoProvedores
+        seccion.innerHTML=infoProvedores
     }
     else{
         seccion.innerHTML=`<p>
