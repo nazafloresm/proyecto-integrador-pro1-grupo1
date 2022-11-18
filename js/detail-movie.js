@@ -16,6 +16,7 @@ let fecha = document.querySelector('.fecha')
 let duracion = document.querySelector('.duracion')
 let sinopsis = document.querySelector('.sinopsis')
 let genero = document.querySelector('.genero')
+let boton = document.querySelector('.boton')
 
 
 
@@ -100,4 +101,30 @@ fetch(verRecomendaciones)
     })
     
 .catch(function(error){  
+})
+
+let favoritosPelicula = []
+let recuperoStorage = localStorage.getItem('favoritosPelicula')
+
+if (recuperoStorage != null){
+    favoritosPelicula = JSON.parse(recuperoStorage)
+}
+
+if (favoritosPelicula.includes(id)){
+    boton.innerText = "Quitar de favoritos"
+}
+
+boton.addEventListener('click', function(e){
+    e.preventDefault()
+    if (favoritosPelicula.includes(id)){
+        let indice = favoritosPelicula.indexOf(id)
+        favoritosPelicula.splice(indice,1)
+        boton.innerText = "Agregar a favoritos"
+    }
+    else{
+        favoritosPelicula.push(id)
+        boton.innerText = "Quitar de favoritos"
+    }
+    let favToString = JSON.stringify(favoritosPelicula)
+    localStorage.setItem('favoritosPelicula', favToString)
 })
