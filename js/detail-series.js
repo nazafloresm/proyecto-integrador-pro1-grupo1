@@ -106,3 +106,18 @@ if (recuperoStorage != null){
 if (favoritosSeries.includes(id)){
     boton.innerText = "Quitar de favoritos"
 }
+
+boton.addEventListener('click', function(e){
+    e.preventDefault()
+    if (favoritosSeries.includes(id)){
+        let indice = favoritosSeries.indexOf(id)
+        favoritosSeries.splice(indice,1)
+        boton.innerText = "Agregar a favoritos"
+    }
+    else{
+        favoritosSeries.push(id)
+        boton.innerText = "Quitar de favoritos"
+    }
+    let favToString = JSON.stringify(favoritosSeries)
+    localStorage.setItem('favoritosSeries', favToString)
+})
