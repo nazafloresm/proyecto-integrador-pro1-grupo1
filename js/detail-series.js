@@ -15,6 +15,7 @@ let rating = document.querySelector('.rating')
 let fecha = document.querySelector('.fecha')
 let sinopsis = document.querySelector('.sinopsis')
 let genero = document.querySelector('.genero')
+let boton = document.querySelector('.boton')
 
 fetch(url)
 .then(function(response){
