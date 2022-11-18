@@ -17,6 +17,7 @@ let duracion = document.querySelector('.duracion')
 let sinopsis = document.querySelector('.sinopsis')
 let genero = document.querySelector('.genero')
 let boton = document.querySelector('.boton')
+let botonrecom = document.querySelector('.botonrecom')
 
 
 
@@ -127,4 +128,19 @@ boton.addEventListener('click', function(e){
     }
     let favToString = JSON.stringify(favoritosPelicula)
     localStorage.setItem('favoritosPelicula', favToString)
+})
+
+let muestraRecomendacion = false
+
+botonrecom.addEventListener('click', function(){
+    
+    if (muestraRecomendacion) {
+        seccion2.style.display = 'none'
+        botonrecom.innerText = 'Ver recomendaciones'
+        muestraRecomendacion = false
+    } else {
+        seccion2.style.display = 'flex'
+        botonrecom.innerText = 'ocultar recomendaciones'
+        muestraRecomendacion = true
+    }
 })

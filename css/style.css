@@ -121,6 +121,13 @@
   border-radius: 5px;
 }
 
+.contenedorboton{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .barra {
   color: white;
   text-decoration: none;
@@ -150,6 +157,10 @@
   margin-right: 200px;
   margin-left: 200px;
   border-radius: 20px;
+}
+
+#detalles3{
+  display: none;
 }
 
 .descripcion_detalle {

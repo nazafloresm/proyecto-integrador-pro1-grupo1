@@ -16,6 +16,7 @@ let fecha = document.querySelector('.fecha')
 let sinopsis = document.querySelector('.sinopsis')
 let genero = document.querySelector('.genero')
 let boton = document.querySelector('.boton')
+let botonrecom = document.querySelector('.botonrecom')
 
 fetch(url)
 .then(function(response){
@@ -120,4 +121,19 @@ boton.addEventListener('click', function(e){
     }
     let favToString = JSON.stringify(favoritosSeries)
     localStorage.setItem('favoritosSeries', favToString)
+})
+
+let muestraRecomendacion = false
+
+botonrecom.addEventListener('click', function(){
+    
+    if (muestraRecomendacion) {
+        seccion2.style.display = 'none'
+        botonrecom.innerText = 'Ver recomendaciones'
+        muestraRecomendacion = false
+    } else {
+        seccion2.style.display = 'flex'
+        botonrecom.innerText = 'ocultar recomendaciones'
+        muestraRecomendacion = true
+    }
 })
