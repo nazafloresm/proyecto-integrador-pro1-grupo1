@@ -45,9 +45,6 @@ fetch(SeriesPopulares)
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${series[i].poster_path}" alt="${series[i].name}">
         <p class="descripcion"><a class="links" href="./detail-serie.html?id=${series[i].id}">${series[i].name}</a></p>
         <p class="descripcion">Estreno: ${series[i].first_air_date}</p>
-        <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
-            <button class="boton" type="submit">Añadir a Favoritos</button>
-        </form>
     </article></a>`
     section2.innerHTML = informacion
     }
@@ -71,9 +68,6 @@ fetch(PeliculasValoradas)
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${PeliculasValoradas[i].poster_path}" alt="${PeliculasValoradas[i].original_title}">
         <p class="descripcion"><a class="links" href="./detail-movie.html?id=${PeliculasValoradas[i].id}">${PeliculasValoradas[i].title}</a></p>
         <p class="descripcion">Estreno: ${PeliculasValoradas[i].release_date}</p>
-        <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
-            <button class="boton" type="submit">Añadir a Favoritos</button>
-        </form>
     </article></a>`
     section3.innerHTML = informacion
     }

@@ -24,9 +24,6 @@ fetch(urlMovies)
         <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${peliculas[i].poster_path}" alt="${peliculas[i].title}">
         <p class="descripcion"><a class="links" href="./detail-movie.html?id=${peliculas[i].id}">${peliculas[i].title}</a></p>
         <p class="descripcion">Fecha: ${peliculas[i].release_date}</p>
-        <form class="descripcion" action="favorites.html" name="Favoritos" method="GET">
-            <button class="boton" type="submit">Añadir a Favoritos</button>
-        </form>
     </article></a>`
     seccion.innerHTML = informacion
     titulo.innerText = `Resultados de búsqueda para: ${resultadoBusqueda}`}
