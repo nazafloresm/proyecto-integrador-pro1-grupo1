@@ -35,3 +35,32 @@ else {
             })
     }
 }
+
+let series = ""
+if (favoritosSeries == null || favoritosSeries.length == 0) {
+    seccionSeries.innerHTML = '<p>No hay películas en favoritos</p>'
+}
+else {
+    for (let i = 0; i < favoritosSeries.length; i++) {
+        let url = `https://api.themoviedb.org/3/tv/${favoritosSeries[i]}?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
+
+        fetch(url)
+            .then(function (respuesta) {
+                return respuesta.json()
+            })
+            .then(function (data) {
+                console.log(data)
+                series += `<a href="./detail-serie.html?id=${data.id}"><article class="fotos">
+                <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.name}">
+                <p class="descripcion"><a class="links" href="./detail-serie.html?id=${data.id}">${data.name}</a></p>
+                <p class="descripcion">Estreno: ${data.first_air_date}</p>
+            </article></a>`;
+                seccionSeries.innerHTML = series;
+                return data;
+            })
+            .catch(function (error) {
+                console.log(error)
+                return error
+            })
+    }
+}
