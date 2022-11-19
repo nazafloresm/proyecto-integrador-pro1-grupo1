@@ -1,5 +1,6 @@
 let form = document.querySelector('.formulario');
 let busqueda = document.querySelector('.busqueda');
+let loader = document.querySelector('.loader')
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
@@ -10,5 +11,10 @@ form.addEventListener('submit', function(event){
     else {
         this.submit();
     }
-}
-)
+})
+
+window.addEventListener('load', function(e){
+    this.setTimeout(function(){
+        loader.style.display = "none"
+    }, 1100)
+})
