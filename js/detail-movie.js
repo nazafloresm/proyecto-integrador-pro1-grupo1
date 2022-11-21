@@ -4,10 +4,11 @@ let id = qsToObj.get('id')
 let url = `https://api.themoviedb.org/3/movie/${id}?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
 let urlProviders = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=700a3a180300423956be7a6dd87ae8b8`
 let verRecomendaciones= `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
+let urlReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
 
-
-let seccion = document.querySelector('#detalles2')
-let seccion2 = document.querySelector('#detalles3')
+let seccion = document.querySelector('#reviews')
+let seccion2 = document.querySelector('#detalles2')
+let seccion3 = document.querySelector('#detalles3')
 
 let nombre = document.querySelector('.nombre')
 let imagen = document.querySelector('.peliculaImg')
@@ -69,10 +70,10 @@ fetch(urlProviders)
         infoProvedores+= `<p class="descripcion_detalle">
         ${provedores[i]['provider_name']}</p>
         <img class="provedor" src="https://image.tmdb.org/t/p/w500${provedores[i]['logo_path']}" alt="">`}
-        seccion.innerHTML=infoProvedores
+        seccion2.innerHTML=infoProvedores
     }
     else{
-        seccion.innerHTML=`<p>
+        seccion2.innerHTML=`<p>
         No hay provedores disponibles</p>`
     }
     })
@@ -97,7 +98,7 @@ fetch(verRecomendaciones)
         <a href="./detail-movie.html?id=${recomendaciones[i].id}"> <img class="img_tarjeta" src="https://image.tmdb.org/t/p/w500${recomendaciones[i].poster_path}" alt="${recomendaciones[i].title}">
         </article></a>`
         }
-        seccion2.innerHTML = informacion
+        seccion3.innerHTML = informacion
     
     })
     
@@ -135,12 +136,34 @@ let muestraRecomendacion = false
 botonrecom.addEventListener('click', function(){
     
     if (muestraRecomendacion) {
-        seccion2.style.display = 'none'
+        seccion3.style.display = 'none'
         botonrecom.innerText = 'Ver recomendaciones'
         muestraRecomendacion = false
     } else {
-        seccion2.style.display = 'flex'
+        seccion3.style.display = 'flex'
         botonrecom.innerText = 'ocultar recomendaciones'
         muestraRecomendacion = true
     }
+})
+
+fetch(urlReviews)
+
+.then(function(response){
+    return response.json()
+    })
+    
+.then(function(data){
+    console.log(data.results)
+    let reviews = data.results
+    let infoReviews = ""
+
+    for (let i=0; i < 2; i++){
+        infoReviews += `<p class="descripcion_detalle">
+        Autor: ${reviews[i].author}</p>
+        <p class="descripcion_detalle">
+        Review: ${reviews[i].content}</p>`}
+        seccion.innerHTML=infoReviews
+})
+
+.catch(function(error){  
 })
