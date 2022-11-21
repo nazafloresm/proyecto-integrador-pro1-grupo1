@@ -5,10 +5,12 @@ let url = `https://api.themoviedb.org/3/movie/${id}?api_key=700a3a180300423956be
 let urlProviders = `https://api.themoviedb.org/3/movie/${id}/watch/providers?api_key=700a3a180300423956be7a6dd87ae8b8`
 let verRecomendaciones= `https://api.themoviedb.org/3/movie/${id}/recommendations?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
 let urlReviews = `https://api.themoviedb.org/3/movie/${id}/reviews?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US&page=1`
+let urlTrailers = `https://api.themoviedb.org/3/movie/${id}/videos?api_key=700a3a180300423956be7a6dd87ae8b8&language=en-US`
 
 let seccion = document.querySelector('#reviews')
 let seccion2 = document.querySelector('#detalles2')
 let seccion3 = document.querySelector('#detalles3')
+let trailers = document.querySelector('#trailers')
 
 let nombre = document.querySelector('.nombre')
 let imagen = document.querySelector('.peliculaImg')
@@ -163,6 +165,31 @@ fetch(urlReviews)
         <p class="descripcion_detalle">
         Review: ${reviews[i].content}</p>`}
         seccion.innerHTML=infoReviews
+})
+
+.catch(function(error){  
+})
+
+
+fetch(urlTrailers)
+
+.then(function(response){
+    return response.json()
+    })
+    
+.then(function(data){
+    console.log(data.results)
+    let dataTrailers = data.results
+    let infoTrailers = ""
+
+    if (dataTrailers == null || dataTrailers.length == 0) {
+        infoTrailers = `<p>No hay trailers disponibles</p>`
+        trailers.innerHTML = infoTrailers
+    } else {
+        for (let i=0; i < dataTrailers.length; i++){
+            infoTrailers += `<iframe width="560" height="315" src="https://www.youtube.com/embed/${dataTrailers[i].key}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <br>`}
+            trailers.innerHTML = infoTrailers
+    }
 })
 
 .catch(function(error){  
