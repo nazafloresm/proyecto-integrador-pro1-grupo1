@@ -158,13 +158,16 @@ fetch(urlReviews)
     console.log(data.results)
     let reviews = data.results
     let infoReviews = ""
-
-    for (let i=0; i < 2; i++){
-        infoReviews += `<p class="descripcion_detalle">
-        Autor: ${reviews[i].author}</p>
-        <p class="descripcion_detalle">
-        Review: ${reviews[i].content}</p>`}
-        seccion.innerHTML=infoReviews
+    if (reviews.length == 0) {
+        seccion.innerHTML = `<p>No hay reviews disponibles</p>`
+    } else {
+        for (let i=0; i < 2; i++){
+            infoReviews += `<p class="descripcion_detalle">
+            Autor: ${reviews[i].author}</p>
+            <p class="descripcion_detalle">
+            Review: ${reviews[i].content}</p>`}
+            seccion.innerHTML=infoReviews
+    }
 })
 
 .catch(function(error){  

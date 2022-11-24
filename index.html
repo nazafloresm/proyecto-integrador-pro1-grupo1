@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>HOME</title>
-</head>
+  </head>
 
-<body class="body">
-
+  <body class="body">
     <header class="header">
+      <nav class="nav">
+        <ul class="lista_nav">
+          <li class="hijas_lista_nav">
+            <a class="barra" href="index.html"> HOME | </a>
+          </li>
+          <li class="hijas_lista_nav">
+            <a class="barra" href="genres.html"> GÉNEROS | </a>
+          </li>
+          <li class="hijas_lista_nav">
+            <a class="barra" href="favorites.html"> FAVORITOS </a>
+          </li>
+        </ul>
+      </nav>
 
-        <nav class="nav">
-            <ul class="lista_nav">
-                <li class="hijas_lista_nav"><a class="barra" href="index.html"> HOME | </a></li>
-                <li class="hijas_lista_nav"><a class="barra" href="genres.html"> GÉNEROS | </a></li>
-                <li class="hijas_lista_nav"><a class="barra" href="favorites.html"> FAVORITOS </a></li>
-            </ul>
-        </nav>
+      <img class="logo" src="./img/logo.png" alt="Logo" />
 
-        <img class="logo" src="./img/logo.png" alt="Logo">
-
-        <form class="formulario" action="./search-results.html" method="GET">
-            <input class="busqueda" placeholder="Búsqueda" name="busqueda" type="text">
-            <button type="submit">Buscar</button>
-        </form>
-
+      <form class="formulario" action="./search-results.html" method="GET">
+        <input
+          class="busqueda"
+          placeholder="Búsqueda"
+          name="busqueda"
+          type="text"
+        />
+        <button type="submit">Buscar</button>
+      </form>
     </header>
 
     <main>
-        <div class="lds-ring loader"><div></div><div></div><div></div><div></div></div>
+      <div class="lds-ring loader">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
 
-        <h2 class="titulos">PELÍCULAS POPULARES</h2>
+      <h2 class="titulos">PELÍCULAS POPULARES</h2>
 
-        <section class="listado_detalle_generos-Favoritos-home-search" id="section">
+      <section
+        class="listado_detalle_generos-Favoritos-home-search"
+        id="section"
+      ></section>
 
-        </section>
+      <h2 class="titulos">SERIES POPULARES</h2>
+      <section
+        class="listado_detalle_generos-Favoritos-home-search"
+        id="section2"
+      ></section>
 
-        <h2 class="titulos">SERIES POPULARES</h2>
-        <section class="listado_detalle_generos-Favoritos-home-search" id="section2">
-
-        </section>
-
-        <h2 class="titulos">PELÍCULAS MÁS VALORADAS</h2>
-        <section class="listado_detalle_generos-Favoritos-home-search" id="section3">
-
-        </section>
-
-
+      <h2 class="titulos">PELÍCULAS MÁS VALORADAS</h2>
+      <section
+        class="listado_detalle_generos-Favoritos-home-search"
+        id="section3"
+      ></section>
     </main>
 
-
     <footer>
-        <section class="footer">
-            <article class="nombres">Nazareno Flores Muñoz</article>
-            <article class="nombres">Luciano Setton</article>
-            <article class="nombres">Santiago Junco</article>
-            <img class="logoFooter" src="./img/logoMDB.svg" alt="">
-        </section>
+      <section class="footer">
+        <article class="nombres">Nazareno Flores Muñoz</article>
+        <article class="nombres">Luciano Setton</article>
+        <article class="nombres">Santiago Junco</article>
+        <img class="logoFooter" src="./img/logoMDB.svg" alt="" />
+      </section>
     </footer>
 
-<script src="./js/index.js" type="text/javascript"></script>
-<script src="./js/formulario.js" type="text/javascript"></script>
-</body>
-
+    <script src="./js/index.js" type="text/javascript"></script>
+    <script src="./js/formulario.js" type="text/javascript"></script>
+  </body>
 </html>

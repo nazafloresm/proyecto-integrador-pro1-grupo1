@@ -1,67 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/css/uikit.min.css"
+    />
+    <title>GENRES</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>GENRES</title>
-</head>
-
-<body class="body">
-  <header class="header">
-    
-    <nav class="nav">
-      <ul class="lista_nav">
-          <li class="hijas_lista_nav"><a class="barra" href="index.html"> HOME | </a></li>
-          <li class="hijas_lista_nav"><a class="barra" href="genres.html"> GÉNEROS | </a></li>
-          <li class="hijas_lista_nav"><a class="barra" href="favorites.html"> FAVORITOS </a></li>
-      </ul>
-  </nav>
-
-    <img class="logo" src="./img/logo.png" alt="Logo" />
-
-    <form class="formulario" action="./search-results.html" method="GET">
-      <input class="busqueda" placeholder="Búsqueda" name="busqueda" type="text" />
-      <button type="submit">Buscar</button>
-    </form>
-  </header>
-
-  <main>
-    <div class="lds-ring loader"><div></div><div></div><div></div><div></div></div>
-    
-    <h1 class="titulos">GÉNEROS PELÍCULAS</h1>
-
-    <section class="genero" id="ul1">
-      <article>
-        <ul class="listas_generos">
-         
+  <body class="body">
+    <header class="header">
+      <nav class="nav">
+        <ul class="lista_nav">
+          <li class="hijas_lista_nav">
+            <a class="barra" href="index.html"> HOME | </a>
+          </li>
+          <li class="hijas_lista_nav">
+            <a class="barra" href="genres.html"> GÉNEROS | </a>
+          </li>
+          <li class="hijas_lista_nav">
+            <a class="barra" href="favorites.html"> FAVORITOS </a>
+          </li>
         </ul>
-      </article>
-    </section>
+      </nav>
 
-    <h2 class="titulos">GENEROS SERIES</h2>
-    <section class="genero" id="ul2">
-      <article>
-        <ul class="listas_generos">
-          
-        </ul>
-      </article>
-    </section>
-  </main>
+      <img class="logo" src="./img/logo.png" alt="Logo" />
 
-  <footer>
-    <section class="footer">
-      <article class="nombres">Nazareno Flores Muñoz</article>
-      <article class="nombres">Luciano Setton</article>
-      <article class="nombres">Santiago Junco</article>
-      <img class="logoFooter" src="./img/logoMDB.svg" alt="">
-    </section>
-  </footer>
+      <form class="formulario" action="./search-results.html" method="GET">
+        <input
+          class="busqueda"
+          placeholder="Búsqueda"
+          name="busqueda"
+          type="text"
+        />
+        <button type="submit">Buscar</button>
+      </form>
+    </header>
 
-  <script src="./js/formulario.js" type="text/javascript"></script>
-  <script src="./js/ genres.js" type="text/javascript"></script>
-</body>
+    <main>
 
+      <h1 class="titulos">GÉNEROS PELÍCULAS</h1>
+
+      <section class="genero uk-animation-fade" id="ul1">
+        <article>
+          <ul class="listas_generos"></ul>
+        </article>
+      </section>
+
+      <h2 class="titulos">GENEROS SERIES</h2>
+      <section class="genero uk-animation-fade" id="ul2">
+        <article>
+          <ul class="listas_generos"></ul>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer">
+        <article class="nombres">Nazareno Flores Muñoz</article>
+        <article class="nombres">Luciano Setton</article>
+        <article class="nombres">Santiago Junco</article>
+        <img class="logoFooter" src="./img/logoMDB.svg" alt="" />
+      </section>
+    </footer>
+
+    <script src="./js/formulario.js" type="text/javascript"></script>
+    <script src="./js/ genres.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.14/dist/js/uikit-icons.min.js"></script>
+  </body>
 </html>
